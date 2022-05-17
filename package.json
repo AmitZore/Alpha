@@ -1,0 +1,149 @@
+{
+  "name": "dokomoforms",
+  "version": "1.0.0",
+  "description": "Frontend dependencies for Dokomoforms",
+  "main": "dokomoforms/static/bundle.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "dependencies": {
+    "backbone": "^1.2.3",
+    "bootstrap": "^3.3.6",
+    "datatables": "https://github.com/DataTables/DataTables/archive/1.10.9.tar.gz",
+    "es5-shim": "^4.3.1",
+    "highcharts-release": "^4.2.1",
+    "jquery": "^2.2.0",
+    "leaflet": "^0.7.7",
+    "lodash-compat": "^3.10.1",
+    "lz-string": "^1.4.4",
+    "moment": "^2.11.1",
+    "node-uuid": "^1.4.7",
+    "pouchdb": "^5.2.0",
+    "pouchdb-upsert": "^2.0.0",
+    "ratchet": "https://github.com/twbs/ratchet/archive/v2.0.2.tar.gz",
+    "react": "^0.14.6",
+    "react-dom": "~0.14.2",
+    "screenfull": "^3.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.1.20",
+    "babel-jest": "^6.0.1",
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-react": "^6.1.18",
+    "babelify": "^7.2.0",
+    "browserify": "^13.0.0",
+    "browserify-shim": "^3.8.12",
+    "del": "^2.0.2",
+    "eslint-plugin-react": "^3.15.0",
+    "event-stream": "^3.3.2",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-html-replace": "^1.5.5",
+    "gulp-if": "^2.0.0",
+    "gulp-less": "^3.0.5",
+    "gulp-livereload": "^3.8.1",
+    "gulp-minify-css": "^1.2.3",
+    "gulp-order": "^1.1.1",
+    "gulp-react": "^3.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-streamify": "^1.0.2",
+    "gulp-uglify": "1.5.1",
+    "istanbul": "^0.4.2",
+    "jest-cli": "^0.8.2",
+    "jsdom": "^7.2.2",
+    "jshint": "^2.8.0",
+    "mocha": "^2.2.4",
+    "mocha-istanbul": "^0.2.0",
+    "node-underscorify": "0.0.14",
+    "react-addons-test-utils": "~0.14.2",
+    "reactify": "^1.1.1",
+    "should": "^8.1.1",
+    "supertest": "^1.1.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.7.0"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "jquery": "global:jQuery",
+    "react": "global:React",
+    "lodash": "global:_",
+    "moment": "global:moment",
+    "leaflet": "global:L",
+    "backbone": "global:Backbone",
+    "lz-string": "global:LZString",
+    "pouchdb": "global:PouchDB",
+    "node-uuid": "global:uuid",
+    "screenfull": "global:screenfull"
+  },
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+    "testFileExtensions": [
+      "js"
+    ],
+    "moduleFileExtensions": [
+      "js"
+    ],
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/"
+    ],
+    "collectCoverage": true,
+    "collectCoverageOnlyFrom": {
+      "dokomoforms/static/src/survey/js/Application.js": true,
+      "dokomoforms/static/src/survey/js/api/FacilityAPI.js": true,
+      "dokomoforms/static/src/survey/js/api/PhotoAPI.js": true,
+      "dokomoforms/static/src/common/js/persona.js": true,
+      "dokomoforms/static/src/survey/js/components/Facility.js": true,
+      "dokomoforms/static/src/survey/js/components/Footer.js": true,
+      "dokomoforms/static/src/survey/js/components/Header.js": true,
+      "dokomoforms/static/src/survey/js/components/Location.js": true,
+      "dokomoforms/static/src/survey/js/components/MultipleChoice.js": true,
+      "dokomoforms/static/src/survey/js/components/Note.js": true,
+      "dokomoforms/static/src/survey/js/components/Photo.js": true,
+      "dokomoforms/static/src/survey/js/components/Question.js": true,
+      "dokomoforms/static/src/survey/js/components/Splash.js": true,
+      "dokomoforms/static/src/survey/js/components/Submit.js": true,
+      "dokomoforms/static/src/survey/js/components/baseComponents/BigButton.js": true,
+      "dokomoforms/static/src/survey/js/components/baseComponents/LittleButton.js": true,
+      "dokomoforms/static/src/survey/js/components/baseComponents/Card.js": true,
+      "dokomoforms/static/src/survey/js/components/baseComponents/Message.js": true,
+      "dokomoforms/static/src/survey/js/components/baseComponents/DontKnow.js": true,
+      "dokomoforms/static/src/survey/js/components/baseComponents/Menu.js": true,
+      "dokomoforms/static/src/survey/js/components/baseComponents/FacilityRadios.js": true,
+      "dokomoforms/static/src/survey/js/components/baseComponents/PhotoField.js": true,
+      "dokomoforms/static/src/survey/js/components/baseComponents/PhotoPreview.js": true,
+      "dokomoforms/static/src/survey/js/components/baseComponents/ResponseField.js": true,
+      "dokomoforms/static/src/survey/js/components/baseComponents/ResponseFields.js": true,
+      "dokomoforms/static/src/survey/js/components/baseComponents/Select.js": true,
+      "dokomoforms/static/src/survey/js/components/baseComponents/Title.js": true
+    }
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SEL-Columbia/dokomoforms.git"
+  },
+  "keywords": [
+    "Dokomoforms",
+    "React",
+    "Browserify",
+    "Survey",
+    "Data",
+    "Collection"
+  ],
+  "author": "Abdi Dahir, Viktor Roytman, & Jonathan Wohl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SEL-Columbia/dokomoforms/issues"
+  },
+  "homepage": "https://github.com/SEL-Columbia/dokomoforms#readme"
+}
